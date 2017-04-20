@@ -1,4 +1,4 @@
-# translate-components 
+# translate-components 🌎🌍🌏  
 translate-component provides a super simple translation for React. Write your application in your language and use translate-component to annotate which texts should be translated.
 
 # Features
