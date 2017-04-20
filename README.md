@@ -1,5 +1,5 @@
 # translate-components 🌎🌍🌏  
-translate-component provides a super simple translation for React. Write your application in your language and use translate-component to annotate which texts should be translated.
+translate-components provides a super simple translation for React. Write your application in your language and use translate-components to annotate which texts should be translated.
 
 # Demo
 ![preview](https://raw.githubusercontent.com/zamarrowski/translate-components/master/preview.gif)
@@ -12,7 +12,7 @@ translate-component provides a super simple translation for React. Write your ap
 
 # Install
 ```
-npm install --save translate-component
+npm install --save translate-components
 ```
 # How to use
 ```
@@ -20,7 +20,7 @@ npm install --save translate-component
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { TranslateProvider } from 'translate-component'
+import { TranslateProvider } from 'translate-components'
 import './index.css';
 import translations from './translations'
 
@@ -37,7 +37,7 @@ Wrap your application with TranslateProvider, pass the translations and the defa
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Translate from 'translate-component'
+import Translate from 'translate-components'
 import { reactTranslateChangeLanguage } from 'translate-components'
 
 class App extends Component {
