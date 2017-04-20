@@ -21,7 +21,7 @@
     "translate-components"
   ],
   "author": "@zamarrowski",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zamarrowski/translate-components/issues"
   },
