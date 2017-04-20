@@ -1,7 +1,7 @@
 {
-  "name": "react-translate",
+  "name": "translate-components",
   "version": "0.0.1",
-  "description": "i18n for React apps.",
+  "description": "🌎🌍🌏 translate-component provides a super simple translation for React.",
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "babel ./src --out-dir ./lib --source-maps --presets es2015,react,stage-2 --plugins babel-plugin-add-module-exports",
@@ -10,21 +10,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zamarrowski/react-translate.git"
+    "url": "git+https://github.com/zamarrowski/translate-components.git"
   },
   "keywords": [
     "react",
     "translate",
     "react-translate",
     "multilingual",
-    "multilanguage"
+    "multilanguage",
+    "translate-components"
   ],
   "author": "@zamarrowski",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zamarrowski/react-translate/issues"
+    "url": "https://github.com/zamarrowski/translate-components/issues"
   },
-  "homepage": "https://github.com/zamarrowski/react-translate#readme",
+  "homepage": "https://github.com/zamarrowski/translate-components#readme",
   "dependencies": {
     "prop-types": "15.5.8",
     "react": "15.5.4",

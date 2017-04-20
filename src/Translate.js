@@ -22,8 +22,12 @@ class Translate extends Component {
   }
 
   _getText(text) {
-    if (this.state.language != this.defaultLanguage) {
-      return this.translations[text][this.state.language]
+    if (this.state.language != this.defaultLanguage && text) {
+      if (this.translations[text] && this.translations[text][this.state.language]) {
+        return this.translations[text][this.state.language]
+      } else {
+        return text
+      }
     } else {
       return text
     }
