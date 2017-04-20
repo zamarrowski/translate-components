@@ -1,6 +1,9 @@
 # translate-components 🌎🌍🌏  
 translate-component provides a super simple translation for React. Write your application in your language and use translate-component to annotate which texts should be translated.
 
+# Demo
+![demo](./demo.gif)
+
 # Features
 * Write in your language.
 * Instant translations without having to refresh your browser.
@@ -67,7 +70,7 @@ class App extends Component {
 export default App;
 ```
 
-Use ```Translate``` component to wrap the text you want to translate. 
+Use ```Translate``` component to wrap the text you want to translate.
 Use ```reactTranslateChangeLanguage``` to change the language of your application. Pass to ```reactTranslateChangeLanguage``` function, as first argument, the language. This translate instantly your application!
 
 Of course, you need to have a translation file to pass it to TranslateProvider like this:
