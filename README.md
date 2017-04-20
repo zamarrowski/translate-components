@@ -59,7 +59,7 @@ class App extends Component {
             Spanish
           </button>
           <button onClick={reactTranslateChangeLanguage.bind(this, 'de')}>
-            Germany
+            German
           </button>
         </div>
       </div>
@@ -86,7 +86,7 @@ export default {
   },
   "and save to reload.": {
     "es": "y guarda para refrescar la pagina",
-    "de": "und speichern neu zu laden."
+    "de": "und speichern, um neu zu laden"
   }
 }
 ```
