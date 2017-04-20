@@ -87,3 +87,4 @@ export default {
   }
 }
 ```
+**The default language passed to TranslateProvider is the key of your translation objects.**
