@@ -22,7 +22,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { TranslateProvider } from 'translate-components'
 import './index.css';
-import translations from './translations'
+import translations from './translations.json'
 
 ReactDOM.render(
   <TranslateProvider translations={translations} defaultLanguage={'en'}>
@@ -73,9 +73,9 @@ export default App;
 Use ```Translate``` component to wrap the text you want to translate.
 Use ```reactTranslateChangeLanguage``` to change the language of your application. Pass to ```reactTranslateChangeLanguage``` function, as first argument, the language. This translate instantly your application!
 
-Of course, you need to have a translation file to pass it to TranslateProvider like this:
+Of course, you need to have a translation **JSON** file to pass it to TranslateProvider like this:
 ```
-export default {
+{
   "Welcome to React": {
     "es": "Bienvenido a React",
     "de": "Willkommen in React"
@@ -91,3 +91,18 @@ export default {
 }
 ```
 **The default language passed to TranslateProvider is the key of your translation objects.**
+
+# Extracting strings
+Once we have our app annotated with **Translate** component it's now time to extract these strings automatically.
+To extract these string we need to create a Javascript file that we will run with NodeJS.
+In this file we should import **getTranslations**:
+```
+let extractTranslations = require('translate-components/lib/getTranslations')
+extractTranslations('./src/*.js', './src/translations.json', ['es', 'de'])
+```
+extractTranslations needs three params:
+* Files RegExp
+* File translation output
+* Languages
+
+If a translation file not exist, translate-components will create a file but if it already exist will add the new translations.
