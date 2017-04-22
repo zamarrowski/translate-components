@@ -1,6 +1,6 @@
 {
   "name": "translate-components",
-  "version": "0.1.6",
+  "version": "1.1.6",
   "description": "🌎🌍🌏 translate-components provides a super simple translation for React.",
   "main": "lib/index.js",
   "scripts": {
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/zamarrowski/translate-components#readme",
   "dependencies": {
+    "glob": "7.1.1",
     "prop-types": "15.5.8",
     "react": "15.5.4",
     "react-dom": "15.5.4"

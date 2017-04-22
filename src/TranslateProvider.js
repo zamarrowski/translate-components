@@ -3,7 +3,11 @@ import PropTypes from 'prop-types'
 
 class TranslateProvider extends Component {
   render() {
-    return this.props.children
+    return (
+      <div>
+        {this.props.children}
+      </div>
+    )
   }
 
   getChildContext() {
