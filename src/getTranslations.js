@@ -9,11 +9,28 @@ export default (file, output, languages) => {
     let regexp = /<Translate>.[^<>]*<\/Translate>/g
     let results = data.match(regexp)
     let texts = getTexts(results, languages)
-    const template = `export default ${JSON.stringify(texts, null, 2)}`
-    fs.writeFile(output, template, err => {
-      if (err) console.log(err)
-      console.log('Translations file created!')
-    })
+    if (fs.existsSync(output)) {
+      fs.readFile(output, 'utf8', (err, data) => {
+        const translationsFile = JSON.parse(data)
+        let newKeysText = Object.keys(texts)
+        newKeysText.map(key => {
+          if (!translationsFile[key]) {
+            translationsFile[key] = texts[key]
+          }
+        })
+        const template = JSON.stringify(translationsFile, null, 2)
+        fs.writeFile(output, template, err => {
+          if (err) console.log(err)
+          console.log('New translations added to translation file!')
+        })
+      })
+    } else {
+      const template = JSON.stringify(texts, null, 2)
+      fs.writeFile(output, template, err => {
+        if (err) console.log(err)
+        console.log('Translations file created!')
+      })
+    }
   })
 }
 
