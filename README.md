@@ -106,3 +106,4 @@ extractTranslations needs three params:
 * Languages
 
 If a translation file not exist, translate-components will create a file but if it already exist will add the new translations.
+Execute node pathToYourFile.js and that will generate a translations file!
