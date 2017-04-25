@@ -1,4 +1,6 @@
-# translate-components 🌎🌍🌏  
+# translate-components 🌎🌍🌏
+[![Build Status](https://travis-ci.org/zamarrowski/translate-components.svg?branch=master)](https://travis-ci.org/zamarrowski/translate-components)
+
 translate-components provides a super simple translation for React. Write your application in your language and use translate-components to annotate which texts should be translated.
 
 # Demo
