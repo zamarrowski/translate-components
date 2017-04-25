@@ -23,18 +23,18 @@ export default (regexp, output, languages) => {
   })
 }
 
-function getTexts(results, languages) {
+export const getTexts = (results, languages) => {
   let texts = {}
   results.map(result => {
     let openTagPosition = result.indexOf(openTag)
     let closeTagPosition = result.indexOf(closeTag)
     let text = result.substr(openTagPosition + openTag.length, closeTagPosition - (closeTag.length - 1))
-    texts[text] = addLanguages(text, languages)
+    texts[text] = addLanguages(languages)
   })
   return texts
 }
 
-function addLanguages(text, languages) {
+export const addLanguages = (languages) => {
   if (languages && languages.length) {
     let object = {}
     languages.map(language => {
@@ -46,13 +46,13 @@ function addLanguages(text, languages) {
   }
 }
 
-function createTranslationsFile(output, texts) {
+export const createTranslationsFile = (output, texts) => {
   const template = JSON.stringify(texts, null, 2)
   fs.writeFileSync(output, template)
   console.log('Translations file created!')
 }
 
-function addNewTranslations(output, texts) {
+export const addNewTranslations = (output, texts) => {
   let data = fs.readFileSync(output, 'utf8')
   const translationsFile = JSON.parse(data)
   let newKeysText = Object.keys(texts)
