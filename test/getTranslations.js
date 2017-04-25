@@ -35,7 +35,7 @@ test('getTexts(): should return a object with two properties', t => {
   t.is(Object.keys(result).length, 2)
 })
 
-test('getTexts(): should return a object with translations', t => {
+test('getTexts(): should return a object with equals translations', t => {
   let texts = [
     '<Translate>Jack Sparrow is the best!</Translate>',
     '<Translate>Where is my compass?</Translate>'
