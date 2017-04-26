@@ -6,6 +6,7 @@ class Translate extends Component {
     super()
     this.translations = JSON.parse(context.translations)
     this.defaultLanguage = context.defaultLanguage
+    this.debugMode = context.debugMode
     this.state = {
       language: this.defaultLanguage
     }
@@ -17,7 +18,7 @@ class Translate extends Component {
 
   render() {
     return (
-      <span>{this._getText(this.props.children)}</span>
+      <span style={this._getDebugModeStyles(this.props.children)}>{this._getText(this.props.children)}</span>
     )
   }
 
@@ -37,11 +38,19 @@ class Translate extends Component {
     this.setState({ language: event.detail })
   }
 
+  _getDebugModeStyles(text) {
+    if (this.debugMode && text && (!this.translations[text] || (!this.translations[text][this.state.language] && this.state.language != this.defaultLanguage))) {
+      return { backgroundColor: 'yellow' }
+    }
+    return {}
+  }
+
 }
 
 Translate.contextTypes = {
   translations: PropTypes.string,
-  defaultLanguage: PropTypes.string
+  defaultLanguage: PropTypes.string,
+  debugMode: PropTypes.bool
 }
 
 export default Translate
