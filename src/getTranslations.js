@@ -4,7 +4,7 @@ import glob from 'glob'
 const openTag = '<Translate>'
 const closeTag = '</Translate>'
 
-export default (regexp, output, languages) => {
+export const extract = (regexp, output, languages) => {
   glob(regexp, (err, files) => {
     if (err) console.log(err)
     files.map(file => {
