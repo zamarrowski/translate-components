@@ -99,10 +99,10 @@ Once we have our app annotated with **Translate** component it's now time to ext
 To extract these string we need to create a Javascript file that we will run with NodeJS.
 In this file we should import **getTranslations**:
 ```
-let extractTranslations = require('translate-components/lib/getTranslations')
-extractTranslations('./src/*.js', './src/translations.json', ['es', 'de'])
+let extractTranslations = require('./../translate-components/lib/getTranslations')
+extractTranslations.extract('./src/*.js', './src/translations.json', ['es', 'de'])
 ```
-extractTranslations needs three params:
+extractTranslations.extract() needs three params:
 * Files RegExp
 * File translation output
 * Languages
