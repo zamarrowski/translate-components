@@ -110,9 +110,10 @@ extractTranslations.extract() needs three params:
 If a translation file not exist, translate-components will create a file but if it already exist will add the new translations.
 Execute node pathToYourFile.js and that will generate a translations file!
 
-## Debug mode (Highlighting texts)
+## Debug mode (Highlight texts)
 Enable debug mode to higlight untranslated texts.
 ```
 <TranslateProvider debugMode={true} translations={translations} defaultLanguage={'en'}>
 ```
-When translate-components does not found a translate for a certain text this text will be higlighted with a background yellow. For example:
+When translate-components does not found a translate for a certain text this text will be higlighted with a background yellow. Demo:
+![highlight](https://raw.githubusercontent.com/zamarrowski/translate-components/master/highlight.gif)
