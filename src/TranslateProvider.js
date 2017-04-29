@@ -13,14 +13,16 @@ class TranslateProvider extends Component {
   getChildContext() {
     return {
       translations: JSON.stringify(this.props.translations),
-      defaultLanguage: this.props.defaultLanguage
+      defaultLanguage: this.props.defaultLanguage,
+      debugMode: this.props.debugMode
     }
   }
 }
 
 TranslateProvider.childContextTypes = {
   translations: PropTypes.string,
-  defaultLanguage: PropTypes.string
+  defaultLanguage: PropTypes.string,
+  debugMode: PropTypes.bool
 }
 
 export default TranslateProvider
