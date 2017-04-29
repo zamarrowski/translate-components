@@ -116,4 +116,5 @@ Enable debug mode to higlight untranslated texts.
 <TranslateProvider debugMode={true} translations={translations} defaultLanguage={'en'}>
 ```
 When translate-components does not found a translate for a certain text this text will be higlighted with a background yellow. Demo:
+
 ![highlight](https://raw.githubusercontent.com/zamarrowski/translate-components/master/highlight.gif)
