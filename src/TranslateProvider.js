@@ -25,4 +25,11 @@ TranslateProvider.childContextTypes = {
   debugMode: PropTypes.bool
 }
 
+TranslateProvider.propTypes = {
+  translations: PropTypes.any,
+  defaultLanguage: PropTypes.string,
+  debugMode: PropTypes.bool,
+  children: PropTypes.node
+};
+
 export default TranslateProvider
