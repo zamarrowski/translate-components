@@ -1,6 +1,6 @@
 {
   "name": "translate-components",
-  "version": "1.3.7",
+  "version": "1.4.0",
   "description": "🌎🌍🌏 translate-components provides a super simple translation for React.",
   "main": "lib/index.js",
   "scripts": {
