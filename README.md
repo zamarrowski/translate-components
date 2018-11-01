@@ -92,6 +92,21 @@ Of course, you need to have a translation **JSON** file to pass it to TranslateP
   }
 }
 ```
+
+By default the ```Translate``` component wraps the tranlated text into a ```<span>``` element. Additionally, you can use the prop ```useRawText``` from the ```Translate``` component to render the tranlated text with no wrapping. This will be useful to render the text in elements that don't support nested ```<span>``` as well as for other user cases like placeholders in ```<input>``` elements. E.g.
+````
+<select className="selectClass">
+  <option value="phone"><Translate useRawText={true}>Phone</Translate></option>
+  <option value="email"><Translate useRawText={true}>Email</Translate></option>
+  <option value="textMessage"><Translate useRawText={true}>Text Message</Translate></option>
+</select>
+...
+...
+<input type="text" name="phone" className="form-control phone" placeholder={<Translate useRawText={true}>Número Telefónico</Translate>} />
+...
+...
+```
+
 **The default language passed to TranslateProvider is the key of your translation objects.**
 
 # Extracting strings
